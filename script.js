@@ -7,7 +7,7 @@ document.querySelector("form").addEventListener("submit", async (e) => {
   button.textContent = "Subscribing...";
 
   try {
-    const res = await fetch("http://127.0.0.1:8080/subscribe", {
+      const res = await fetch("https://automatedprayertimes.fly.dev/subscribe", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email }),
