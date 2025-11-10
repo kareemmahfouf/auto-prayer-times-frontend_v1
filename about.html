@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn how the Automated Prayer Times app works — a full-stack project that emails daily prayer schedules automatically using Python, Flask, and Fly.io.">
+    <title>About - Automated Prayer Times</title>
+</head>
+<body class="about">
+    <header>
+        <nav>
+    <a  id="headerhome" href="index.html">Home</a>
+    <a id="headerabout" href="about.html">About</a>
+        </nav>
+        <h1>About This Project</h1>
+        
+    </header>
+
+    <main>
+        <section>
+            <h2>Overview</h2>
+            <br>
+            <p>
+                The <strong>Automated Prayer Times</strong> app was built to simplify the process of keeping track of daily prayer schedules.
+                It automatically retrieves prayer times from your local mosque and delivers them to your email every morning.
+        </p>
+        <br>
+        </section>
+
+        <section>
+            <h2>The General Concept</h2>
+            <br>
+            <ul>
+            <li>Prayer times are scraped from verified mosque websites each day</li>
+            <li>A randomised hadith from <strong>Sahih Bukhari</strong> is generated daily</li>
+            <li>Emails are formatted with a table containing your city's prayer times and a hadith</li>
+            <li>Emails are sent out every morning to subscribed users at 6:30am GMT</li>
+            <li>See below for the current email format (subject to future improvements)</li>
+            </ul>
+            <br>
+            <img src="autotimes.png">
+            <br>
+            <br>
+        </section>
+
+        <section>
+            <h2>Purpose Of This Project</h2>
+            <br>
+            <p>
+                This project was designed as a real-world automation tool in order to exercise my development skills, but more importantly, 
+                to benefit the ummah. I saw a real need for this application, and I believe (and hope) that one day it will aid Muslims across 
+                the UK in fulfilling their prayers in a country where services such as adhan (public prayer announcement) are not accessible. 
+            </p>
+            <br>
+        </section>
+
+        <section>
+            <h2>How I Did It (for those curious)</h2>
+            <br>
+            <p>This is a very simple, full-stack web application with a communicating front and backend.</p>
+            <ul>
+            <li>The frontend is hosted on vercel</li>
+            <li>The backend is a Python script utilising the Flask framework, hosted on Fly.io</li>
+            <li>The script runs indefinitely, and is on a scheduler, constantly checking for time to send</li>
+            <li>Once assigned time (6:30am GMT) hits, the script executes and the emails are automatically formatted and sent</li>
+            <li>Frontend allows users to subscribe with their email, Backend receives subscriber's email and writes to a subscribers file</li>
+            </ul>
+            <br>
+        </section>
+
+        <section>
+            <h2>Future additions</h2>
+            <br>
+            <ul>
+            <li>Replacing subscribers file for subscribers database</li>
+            <li>Configuration for more UK cities, perhaps certain cities in different countries</li>
+            <li>Unsubscribe functionality — currently, users must contact me to be manually unsubscribed</li>
+            <li>Open to any other suggestions :)</li>
+            </ul>
+            <br>
+        </section>
+
+        <section>
+        <h2>Contact</h2>
+        <br>
+        <p>Should you need to contact the creator of this page, you may do so using the following email: kareem.mahfouf@gmail.com</p>
+        <br>
+        </section>
+    </main>
+
+    <footer>
+    <p id="three">© 2025 Automated Prayer Times — Created and maintained by <a href="https://github.com/kareemmahfouf"><strong>Kareem Mahfouf</strong></a></p>
+    </footer>
+
+
+</body>
+</html>
